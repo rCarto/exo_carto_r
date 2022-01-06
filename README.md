@@ -1,15 +1,10 @@
-# Évalutation du cours “Géomatique et cartographie avec R
+# Évalutation du cours "Géomatique et cartographie avec R" <img src="img/logo.png" align="right" width="120"/>
 
+## Analyse des prix de l’immobilier à Vincennes et Montreuil 
 
 *Timothée Giraud & Hugues Pecout*
 
-<div style="float: right">
 
-<img src="img/logo.png" width="200px" padding="0.2em"/>
-
-</div>
-
-## Analyse des prix de l’immobilier à Vincennes et Montreuil
 
 ### Présentation et préparation de l’espace de travail (4 points)
 
@@ -18,7 +13,7 @@ machine puis le dézipper.
 
 Vous devez ensuite renommer le fichier **NOM_Prenom.R** avec vos propres
 noms et prénoms.  
-<u>C’est ce fichier et uniquement ce fichier</u> que vous devrez nous envoyer
+C’est ce fichier et uniquement ce fichier</u> que vous devrez nous envoyer
 avant le **x février 2022**.  
 
 Assurez vous bien que le script fonctionne avant de nous envoyer le
@@ -28,7 +23,8 @@ relancer le script.
 Vous devez apporter un soin particulier à la présentation du code. Il
 doit être lisible aéré et commenté.
 
-Vous devrez également soigner la présentation des cartes. Faites attention à l'othographe et n'oubliez pas les éléments d'habillage nécessaires. 
+Vous devrez également soigner la présentation des cartes. Faites attention à 
+l'othographe et n'oubliez pas les éléments d'habillage nécessaires. 
 
 ### Importer les couches d’information et les cartographier (4 points)
 
@@ -50,9 +46,9 @@ Ce fichier geopackage contient 5 couches d’information :
 
 Vous produirez une carte de la région étudiée en utilisant toutes les
 couches d’information disponibles.  
-Vous devez exporter la carte dans une figure ayant une largeur de 1000
+Vous devez exporter la carte dans une figure ayant une largeur de 800
 pixels.   
-<u>Attention nous ne demandons pas la carte elle-même, uniquement
+Attention nous ne demandons pas la carte elle-même, uniquement
 le code qui a servi à la produire.</u>
 
 Sur cette carte vous devez faire figurer les limites communales de
@@ -68,7 +64,7 @@ d’orientation, echelle, titre, sources…).
 Créer une carte ou chaque bien vendu apparait sous la forme d’un point
 coloré en fonction de son prix.  
 Exportez cette carte en PNG avec une largeur de 800 pixels.   
-<u>Attention nous ne demandons pas la carte elle-même, uniquement
+Attention nous ne demandons pas la carte elle-même, uniquement
 le code qui a servi à la produire.</u>  
 Vous devrez justifier la méthode de discrétisation que vous utilisez.
 
@@ -90,7 +86,7 @@ Calculez le prix médian au mètre carré par carreau.
 Construire un carte représentant le prix médian par carreau en
 n’affichant que les carreaux ayant plus de 10 transactions.  
 Exportez cette carte en PNG avec une largeur de 800 pixels.  
-<u>Attention nous ne demandons pas la carte elle-même, uniquement
+Attention nous ne demandons pas la carte elle-même, uniquement
 le code qui a servi à la produire.</u>  
 Justifiez la discrétisation utilisée.
 
