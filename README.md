@@ -15,7 +15,7 @@ machine puis le dézipper.
 Vous devez ensuite renommer le fichier **NOM_Prenom.R** avec vos propres
 noms et prénoms.  
 C’est ce fichier et uniquement ce fichier</u> que vous devrez nous envoyer
-avant le **x février 2022**.  
+avant le **5 février 2022**.  
 
 Assurez vous bien que le script fonctionne avant de nous envoyer le
 fichier. Pour cela vous pouvez relancer votre session R (ctrl+shift+F10) puis
