@@ -41,7 +41,7 @@ Ce fichier geopackage contient 5 couches d’information :
     contributeurs d’OpenStreetMap, 2021),
 -   **rail**, le réseau ferré de la région étudiée (© les contributeurs
     d’OpenStreetMap, 2021),
--   **apt**, un extrait des appartements vendus entre 2016 et 2021 dans
+-   **dvf**, un extrait des appartements vendus entre 2016 et 2021 dans
     les communes de Vincennes et de Montreuil (Demandes de valeurs
     foncières géolocalisées, Etalab, 2021).
 
