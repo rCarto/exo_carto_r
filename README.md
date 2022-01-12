@@ -10,6 +10,7 @@
 
 Vous devez tout d’abord télécharger le projet **exo_carto_2022** sur votre
 machine puis le dézipper.  
+![](img/download.png)
 
 Vous devez ensuite renommer le fichier **NOM_Prenom.R** avec vos propres
 noms et prénoms.  
