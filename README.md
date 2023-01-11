@@ -47,7 +47,7 @@ Ce fichier geopackage contient 5 couches d’information :
 
 Vous produirez une carte de la région étudiée en utilisant toutes les
 couches d’information disponibles.  
-Vous devez exporter la carte dans une figure ayant une largeur de 800
+Vous devez exporter la carte dans une figure en PNG ayant une largeur de 800
 pixels.   
 Attention nous ne demandons pas la carte elle-même, uniquement
 le code qui a servi à la produire.</u>
