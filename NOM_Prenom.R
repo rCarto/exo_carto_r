@@ -32,7 +32,7 @@
 
 
 
-cat(paste0("Le prix de l'immobilier dans un voisinnage de 500 mètres ",
+cat(paste0("Le prix de l'immobilier dans un voisinnage de 600 mètres ",
            "autour de la mairie de Montreuil est de ", 
            round(value, 0), 
            " euros par m²"))
@@ -49,19 +49,15 @@ cat(paste0("Le prix de l'immobilier dans un voisinnage de 500 mètres ",
 
 # Transformer la grille en objet sf avec st_sf()
 
-# Ajouter un identifiant unique, voir chapitre 3.7.6
-# dans https://rcarto.github.io/geomatique_avec_r/
+# Ajouter un identifiant unique
 
-# Compter le nombre de transaction dans chaque carreau, voir chapitre 3.7.7 
-# dans https://rcarto.github.io/geomatique_avec_r/
+# Faire une jointure spatiale entre les transactions et la grille
 
-# Calculez le prix median par carreau, voir chapitre 3.7.8
-# dans https://rcarto.github.io/geomatique_avec_r/
-# st_intersection(), aggregate(), merge()
+# Compter le nombre de transaction dans chaque carreau
 
-# Selectionner les carreaux ayant plus de 10 transactions, voir chapitre 3.5
-# dans https://rcarto.github.io/geomatique_avec_r/
+# Calculez le prix median par carreau
 
+# Selectionner les carreaux ayant plus de 5 transactions
 
 # Justification de la discrétisation (statistiques, boxplot, histogramme, 
 # beeswarm...)

@@ -11,6 +11,8 @@ Extraction des données DVF dans les communes de Montreuil et de Vincennes
 
 Source : [Demandes de valeurs foncières géolocalisées, Etalab, 2021](https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres-geolocalisees/)
 
+ADECOGC_3
+
 ```r
 library(sf)
 # import des communes de Vincennes et de Montreuil
@@ -22,13 +24,13 @@ st_write(obj = com, dsn = paste0("data/dvf.gpkg"), layer = "com",
 # Téléchargement des données DVF
 dvf_url <- "https://files.data.gouv.fr/geo-dvf/latest/csv/%s/communes/%s/%s.csv"
 dvf_file <- "data-raw/dvf/%s_%s.csv"
-for (i in 2016:2021){
+for (i in 2018:2023){
   download.file(
     url = sprintf(dvf_url, i, 94, 94080),
     destfile = sprintf(dvf_file, i, 94080)
   )
 }
-for (i in 2016:2021){
+for (i in 2018:2023){
   download.file(
     url = sprintf(dvf_url, i, 93, 93048),
     destfile = sprintf(dvf_file, i, 93048)
@@ -40,6 +42,7 @@ for (i in 1:length(lf)){
   ldvf[[i]] <-read.csv(paste0("data-raw/dvf/", lf[[i]]))
 }
 dvf <- do.call(rbind, ldvf)
+
 
 # les monoventes
 ag <- aggregate(dvf$id_mutation,by = list(id_mutation = dvf$id_mutation), FUN = length)
@@ -72,7 +75,8 @@ apt$prix <- apt$valeur_fonciere / apt$surface_reelle_bati
 qt <- quantile(apt$prix,probs = seq(0,1,.01), na.rm = T)
 apt <- apt[!is.na(apt$prix) &  apt$prix<qt[96] & apt$prix>qt[4], ]
 # jitter
-apt <- st_jitter(apt, amount = 15)
+apt <- st_jitter(apt, amount = 30)
+
 # Export
 st_write(obj = apt, dsn = paste0("data/dvf.gpkg"), layer = "dvf",
          delete_layer = TRUE, quiet = TRUE)
@@ -100,21 +104,26 @@ green1 <- my_opq %>%
                                              "meadow",
                                              "orchard", "recreation_ground",
                                              "village_green", "vineyard")) %>%
-  osmdata_sf()
+  osmdata_sf() %>% 
+  unique_osmdata()
 green2 <- my_opq %>%
   add_osm_feature(key = "amenity", value = c("grave_yard")) %>%
-  osmdata_sf()
+  osmdata_sf()%>% 
+  unique_osmdata()
 green3 <- my_opq %>%
   add_osm_feature(key = "leisure", value = c("garden", "golf_course",
                                              "nature_reserve", "park", "pitch")) %>%
-  osmdata_sf()
+  osmdata_sf()%>% 
+  unique_osmdata()
 green4 <- my_opq %>%
   add_osm_feature(key = "natural", value = c("wood", "scrub", "health",
                                              "grassland", "wetland")) %>%
-  osmdata_sf()
+  osmdata_sf()%>% 
+  unique_osmdata()
 green5 <- my_opq %>%
   add_osm_feature(key = "tourism", value = c("camp_site")) %>%
-  osmdata_sf()
+  osmdata_sf()%>% 
+  unique_osmdata()
 
 sg <- function(x){
   if(!is.null(x$osm_polygons)){

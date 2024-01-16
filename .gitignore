@@ -41,3 +41,6 @@ vignettes/*.pdf
 rep.R
 
 rendus_2022/
+
+
+data-raw/
